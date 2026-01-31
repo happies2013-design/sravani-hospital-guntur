@@ -1,8 +1,4 @@
 {
-    "name": "sravani-hospitals-final",
-    "alias": [
-        "sravani.guideitsol.com"
-    ],
     "rewrites": [
         {
             "source": "/(.*)",
