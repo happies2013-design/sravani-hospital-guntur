@@ -30,3 +30,11 @@ dist-ssr
 
 # Vercel
 .vercel
+
+# Caches
+.npm-cache/
+temp-cache/
+deploy_clean/
+node_modules/
+dist/
+dist-electron/
