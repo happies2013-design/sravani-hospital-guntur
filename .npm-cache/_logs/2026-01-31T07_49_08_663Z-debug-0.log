@@ -1,0 +1,12 @@
+0 verbose cli /usr/local/bin/node /Users/mac/node_modules/.bin/npm
+1 info using npm@11.8.0
+2 info using node@v24.5.0
+3 silly config load:file:/Users/mac/node_modules/npm/npmrc
+4 silly config load:file:/Users/mac/SravaniBASE44/temp-app/.npmrc
+5 silly config load:file:/Users/mac/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm run dev
+8 verbose argv "run" "dev"
+9 verbose logfile logs-max:10 dir:/Users/mac/SravaniBASE44/.npm-cache/_logs/2026-01-31T07_49_08_663Z-
+10 verbose logfile /Users/mac/SravaniBASE44/.npm-cache/_logs/2026-01-31T07_49_08_663Z-debug-0.log
+11 silly logfile done cleaning log files
