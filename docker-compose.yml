@@ -1,47 +1,12 @@
 version: '3.8'
 
 services:
-  sravani-hospital:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        - VITE_BASE44_APP_ID=${VITE_BASE44_APP_ID}
-        - VITE_BASE44_FUNCTIONS_VERSION=${VITE_BASE44_FUNCTIONS_VERSION}
-        - VITE_BASE44_APP_BASE_URL=${VITE_BASE44_APP_BASE_URL}
-    container_name: sravani-hospital-guntur
     ports:
-      - "80:80"
-      - "443:443"
+      - "3000:80"
     environment:
       - NODE_ENV=production
-      - VITE_APP_NAME=Sravani Multi-Specialty Hospital
-      - VITE_LOCATION=Guntur, Andhra Pradesh
-      - VITE_ADDRESS=Old Bank Road, Kotthapet, Guntur 522001
-      - VITE_PHONE=0863-2233644
-      - VITE_EMERGENCY=0863-2352354
     restart: unless-stopped
-    networks:
-      - sravani-network
-    labels:
-      - "com.dokploy.project=sravani-hospital"
-      - "com.dokploy.environment=production"
-      - "traefik.enable=true"
-      - "traefik.http.routers.sravani.rule=Host(`sravanihospital.com`)"
-      - "traefik.http.routers.sravani.entrypoints=websecure"
-      - "traefik.http.routers.sravani.tls.certresolver=letsencrypt"
-      - "traefik.http.services.sravani.loadbalancer.server.port=80"
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-
-networks:
-  sravani-network:
-    driver: bridge
-
-volumes:
-  sravani-data:
-    driver: local
