@@ -155,10 +155,9 @@ export default function DepartmentSlider3D() {
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </Button>
                       </Link>
-                      <Link to={createPageUrl('BookAppointment')}>
-                        <Button variant="outline" className="border-gray-200 hover:bg-gray-50">
+                      <Link to={createPageUrl('book-appointment')}>
+                        <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                           Book Appointment
-                          <Calendar className="w-4 h-4 ml-2" />
                         </Button>
                       </Link>
                     </div>

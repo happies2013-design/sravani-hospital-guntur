@@ -20,7 +20,10 @@ const FAQ = lazy(() => import('./pages/FAQ'));
 const Facilities = lazy(() => import('./pages/Facilities'));
 const HealthPackages = lazy(() => import('./pages/HealthPackages'));
 const Insurance = lazy(() => import('./pages/Insurance'));
+const MedicalCamps = lazy(() => import('./pages/MedicalCamps'));
 const PatientPortal = lazy(() => import('./pages/PatientPortal'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 const Login = lazy(() => import('./pages/Login'));
 
 export const pagesConfig = {
@@ -46,6 +49,9 @@ export const pagesConfig = {
         'facilities': Facilities,
         'health-packages': HealthPackages,
         'insurance': Insurance,
-        'patient-portal': PatientPortal
+        'medical-camps': MedicalCamps,
+        'patient-portal': PatientPortal,
+        'privacy': Privacy,
+        'terms': Terms
     }
 };

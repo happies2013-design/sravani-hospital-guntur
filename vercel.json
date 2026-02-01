@@ -1,12 +1,34 @@
 {
-    "name": "sravani-hospitals-final",
-    "alias": [
-        "sravani.guideitsol.com"
-    ],
-    "rewrites": [
+    "name": "sravani-hospital-guntur",
+    "version": 2,
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "/index.html"
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
         }
-    ]
+    ],
+    "routes": [
+        {
+            "src": "/assets/(.*)",
+            "dest": "/assets/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
+    ],
+    "env": {
+        "VITE_APP_NAME": "Sravani Multi-Specialty Hospital",
+        "VITE_LOCATION": "Guntur, Andhra Pradesh",
+        "VITE_ADDRESS": "Old Bank Road, Kotthapet, Guntur 522001",
+        "VITE_PHONE": "0863-2233644",
+        "VITE_EMERGENCY": "0863-2352354"
+    },
+    "regions": [
+        "bom1"
+    ],
+    "framework": "vite"
 }

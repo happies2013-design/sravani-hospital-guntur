@@ -379,7 +379,7 @@ export default function AdminPatients() {
                             </div>
 
                             <div className="flex gap-2">
-                                <Link to={createPageUrl(`BookAppointment?patient=${selectedPatient.id}`)} className="flex-1">
+                                <Link to={createPageUrl(`book-appointment?patient=${selectedPatient.id}`)} className="flex-1">
                                     <Button className="w-full">Book Appointment</Button>
                                 </Link>
                                 <Button variant="outline" className="flex-1">View History</Button>

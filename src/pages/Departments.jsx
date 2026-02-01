@@ -157,7 +157,7 @@ export default function Departments() {
 
                                         {/* CTA */}
                                         <div className="flex gap-2">
-                                            <Link to={createPageUrl(`Department?slug=${dept.slug}`)} className="flex-1">
+                                            <Link to={createPageUrl(`book-appointment?department=${dept.slug}`)} className="flex-1">
                                                 <Button variant="outline" className="w-full">
                                                     Learn More
                                                 </Button>
@@ -186,7 +186,7 @@ export default function Departments() {
                         Our expert doctors are ready to help you. Book an appointment or call us for consultation.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link to={createPageUrl('BookAppointment')}>
+                        <Link to={createPageUrl('book-appointment')}>
                             <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
                                 <Calendar className="w-5 h-5 mr-2" />
                                 Book Appointment
